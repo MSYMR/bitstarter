@@ -1,34 +1,17 @@
+#!/usr/bin/env node
 var express = require('express');
 var app = express.createServer(express.logger());
-
+var port = process.env.PORT || 5000;
 var fs = require('fs');
 var fileName = "./index.html";
-var str = null;
+var content = fs.readFileSync(fileName);
+var str = content.toString("utf-8", 0, content.length);
 
-fs.exists(fileName, function(exists) {
-    if (exists) {
-        fs.stat(fileName, function(error, stats) {
-            fs.open(fileName, "r", function(error, fd) {
-                var buf = new Buffer(stats.size);
-                fs.read(fd, buf, 0, buf.length, null, function(err, bytesRead, buf) {
-                    var str = buf.toString('utf8', 0, buf.length);
-                    console.log(str);
-                    fs.close(fd);
-                });
-            });
-        });
-    }
-    else {
-        str = "Problem encountered.  Contact web administrator.";
-    }
-});
-
-
-app.get('/', function(request, response) {
-  response.send(str);
-});
-
-var port = process.env.PORT || 5000;
 app.listen(port, function() {
-  console.log("Listening on " + port);
+    console.log("Listening on " + port);
+});
+
+
+app.get("/", function(request, response) {
+    response.send(str);
 });
