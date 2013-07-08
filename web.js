@@ -1,12 +1,26 @@
 var express = require('express');
 
+var fs = require('fs');
+var fileName = "./index.html";
+
+fs.exists(fileName, function(exists) {
+    if (exists) {
+        fs.stat(fileName, function(error, stats) {
+            fs.open(fileName, "r", function(error, fd) {
+                var buf = new Buffer(stats.size);
+                fs.read(fd, buf, 0, buf.length, null, function(err, bytesRead, buf) {
+                    var str = buf.toString('utf8', 0, buf.length);
+                    console.log(str);
+                    fs.close(fd);
+                });
+            });
+        });
+    else {
+        str = "Problem encountered.  Contact web administrator.";
+    }
+});
+
 var app = express.createServer(express.logger());
-
-var buf = new Buffer(256);
-
-buf = fs.readFileSync('./index.html');
-
-var str = buf.toString('utf8', 0, buf.length);
 
 app.get('/', function(request, response) {
   response.send(str);
