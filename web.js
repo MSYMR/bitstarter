@@ -1,7 +1,10 @@
+#!/usr/bin/env node
 var express = require('express');
+var app = express.createServer(express.logger());
 
 var fs = require('fs');
 var fileName = "./index.html";
+var str = null;
 
 fs.exists(fileName, function(exists) {
     if (exists) {
@@ -15,12 +18,12 @@ fs.exists(fileName, function(exists) {
                 });
             });
         });
+    }
     else {
         str = "Problem encountered.  Contact web administrator.";
     }
 });
 
-var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   response.send(str);
