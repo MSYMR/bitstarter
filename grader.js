@@ -3,35 +3,21 @@
 Automatically grade files for the presence of specified HTML tags/attributes.
 Uses commander.js and cheerio. Teaches command line application development
 and basic DOM parsing.
-
-References:
-
- + cheerio
-   - https://github.com/MatthewMueller/cheerio
-   - http://encosia.com/cheerio-faster-windows-friendly-alternative-jsdom/
-   - http://maxogden.com/scraping-with-node.html
-
- + commander.js
-   - https://github.com/visionmedia/commander.js
-   - http://tjholowaychuk.com/post/9103188408/commander-js-nodejs-command-line-interfaces-made-easy
-
- + JSON
-   - http://en.wikipedia.org/wiki/JSON
-   - https://developer.mozilla.org/en-US/docs/JSON
-   - https://developer.mozilla.org/en-US/docs/JSON#JSON_in_Firefox_2
 */
 
 var fs = require('fs');
 var program = require('commander');
+var rest = require('restler');
 var cheerio = require('cheerio');
-var HTMLFILE_DEFAULT = "index.html";
+var FILE2CHK_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
+var URL_DEFAULT = "";
 
 var assertFileExists = function(infile) {
     var instr = infile.toString();
     if(!fs.existsSync(instr)) {
         console.log("%s does not exist. Exiting.", instr);
-        process.exit(1); // http://nodejs.org/api/process.html#process_process_exit_code
+        process.exit(1);
     }
     return instr;
 };
@@ -55,17 +41,37 @@ var checkHtmlFile = function(htmlfile, checksfile) {
     return out;
 };
 
-var clone = function(fn) {
-    // Workaround for commander.js issue.
-    // http://stackoverflow.com/a/6772648
-    return fn.bind({});
-};
+var download = function(url, fname) {
+    var resp = rest.get(url);
+    resp.on('complete', function(result) {
+        if (result instanceof Error) {
+            console.log('Error:  ' + result.message);
+            return 1; 
+        }
+    return 0; 
+    });
+}
+
 
 if(require.main == module) {
     program
-        .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
-        .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
+        .option('-c, --checks <check_file>', 'Name of JSON check file', CHECKSFILE_DEFAULT)
+        .option('-f, --file <html_file>', 'Name of HTML file', FILE2CHK_DEFAULT)
+        .option('-u, --url <web_address>', 'Web site from which to pull file', URL_DEFAULT)
         .parse(process.argv);
+    var chkforfile = assertFileExists(program.checks);
+    if (program.file == "") {
+        console.log("Name of file to be checked must be provided.");
+        process.exit(1);
+    }
+    if ( program.url != "" ) {
+        var dnldcode = download(program.url, program.file);
+        if (dnldcode != 0) {
+            console.log("Unable to download file.  Exiting.");
+            process.exit(1);
+        }
+    }
+    chkforfile = assertFileExists(program.file);
     var checkJson = checkHtmlFile(program.file, program.checks);
     var outJson = JSON.stringify(checkJson, null, 4);
     console.log(outJson);
