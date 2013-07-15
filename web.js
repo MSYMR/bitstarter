@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var express = require('express');
 var app = express.createServer(express.logger());
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8080;
 var fs = require('fs');
 var fileName = "./index.html";
 var content = fs.readFileSync(fileName);
