@@ -1,263 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>jsGourmet</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
-    <style type="text/css">
-      /*LARGE desktop*/
-      @media (min-width: 980px) {
-        body {
-          padding-top: 60px;
-        }
-        .linediv-l {
-          border-right: 1px white solid;
-        }
-        .linediv-r {
-          border-left: 1px white solid;
-        }
-      }
-      /*Landscape phones and down*/
-      @media (max-width: 480px) {
-        .copy {
-          padding: 2.5% 10%;
-        }
-        .linediv-l {
-          border-bottom: 1px white solid;
-        }
-        .linediv-r {
-          border-top: 1px white solid;
-        }
-      }
-      /*All form factors*/
-      /*Main body and headings*/
+<head>
+  <meta charset="utf-8">
+  <title>jsGourmet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet"  href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+  <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
+
+  <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+  <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+
+    /*LARGE desktop*/
+    @media (min-width: 980px) {
       body {
-        font-family:  'Open Sans', Helvetica, Arial, sans-serif;
+        padding-top: 60px;
       }
-      .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        text-align: center;
+      .linediv-l {
+        border-right: 1px white solid;
       }
-      p.lead {
-        padding-top: 1.5%;
-        font-size: 24px;
-        line-height: 30px;
+      .linediv-r {
+        border-left: 1px white solid;
       }
-      p {
-        font-size: 18px;
-        line-height: 24px;
-      }
-      /*Video pitch and Action*/
-      .pitch {
-        padding: 2.5% 0%;
-      }
-      .order {
-        padding: 2% 0%;
-      }
-      .actions {
-        background-color: #343434;
-        padding: 3% 0%;
-      }
-      .video, .thermometer, .order, .social, .statistics {
-        text-align: center;
-      }
-      .statistics h3, .statistics p {
-        color: white;
-      }
-      /*Market Copy and Footer*/
+    }
+
+    /*Landscape phones and down*/
+    @media (max-width: 480px) {
       .copy {
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        text-align: justify;
+        padding: 2.5% 10%;
       }
-      .asset {
-        padding: 2.5% 0%;
+      .linediv-l {
+        border-bottom: 1px white solid;
       }
-      .footer {
-        color: #cccccc;
-        text-align: center;
+      .linediv-r {
+        border-top: 1px white solid;
       }
-      .footer p {
-        font-size: 11px;
-      }
-      .footer a {
-        color: #ccccff;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Mobile-friendly navigation bar -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar"
-                  data-toggle="collapse" data-target=".nav-collapse">
+    }
+
+    /*Main body and headings*/
+    body {
+      font-family:  'Open Sans', Helvetica, Arial, sans-serif;
+    }
+    .heading, .subheading {
+      font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      text-align: center;
+    }
+    p.lead {
+      padding-top: 1.5%;
+      font-size: 24px;
+      line-height: 30px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    /*Video pitch and Action*/
+    .pitch {
+      padding: 2.5% 0%;
+    }
+    .order {
+      padding: 2% 0%;
+    }
+    .actions {
+      background-color: #343434;
+      padding: 3% 0%;
+    }
+    .video, .thermometer, .order, .social, .statistics {
+      text-align: center;
+    }
+    .statistics h3, .statistics p {
+      color: white;
+    }
+
+    /*Market Copy and Footer*/
+    .copy {
+      padding-top: 2.5%;
+      padding-bottom: 2.5%;
+      text-align: justify;
+    }
+    .asset {
+      padding: 2.5% 0%;
+    }
+    .footer {
+      color: #cccccc;
+      text-align: center;
+    }
+    .footer p {
+      font-size: 11px;
+    }
+    .footer a {
+      color: #ccccff;
+    }
+  
+  <!-- http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position -->
+  div.addthis_toolbox {
+    width:180px;
+    margin: 0 auto;
+  }
+</style>
+
+<!-- Use Google Analytics ga.js script -->
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-42958196-1']);
+ _gaq.push(['_trackPageview']);
+ (function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  }
+ ) ();
+</script>
+
+</head>
+
+<body>
+  
+  <!-- Mobile-friendly navigation bar -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar"
+                data-toggle="collapse"
+                data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">jelly shot Gourmets</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!-- nav-collapse collapse -->
-        </div><!-- container -->
-      </div><!-- navbar-inner -->
-    </div><!-- navbar navbar-inversenavbar-fixed-top -->
-    <!-- Use row-fluid for resizable layout -->
-    <div class="container">
-      <div class="row-fluid heading">
-        <div class="span12">
-          <h1>Gourmet Jelly Shots</h1>
-        </div><!-- span12 -->
-      </div><!-- row-fluid heading -->
-      <div class="row-fluid subheading">
-        <div class="span12">
-          <p class="lead">The "Jell-o" shot's all grown up.</p>
-        </div><!-- span12 -->
-      </div><!-- row-fluid subheading -->
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" style="float:center" alt="Unlimited Possibilities" src="http://t3.gstatic.com/images?q=tbn:ANd9GcSX1tKiT3570tNLYHdlF-HxEyyWbJhKA148Dmu5yUUFb71NE-C2Xg" width="350" height="480">
-        </div><!-- span5 offset1 asset-->
-        <div class="span5 actions">
+        </button>
+        <a class="brand" href="#">jelly shot Gourmets</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!-- nav-collapse collapse -->
+      </div><!-- container -->
+    </div><!-- navbar-inner -->
+  </div><!-- navbar navbar-inverse navbar-fixed-top -->
+
+  <!-- Use row-fluid for resizable layout -->
+  <div class="container">
+    
+    <div class="row-fluid heading">
+      <div class="span12">
+        <h1>Gourmet Jelly Shots</h1>
+      </div><!-- span12 -->
+    </div><!-- row-fluid heading -->
+
+    <div class="row-fluid subheading">
+      <div class="span12">
+        <p class="lead">The "Jell-o" shot's all grown up.</p>
+      </div><!-- span12 -->
+    </div><!-- row-fluid subheading -->
+    
+    <div class="row-fluid pitch">
+      <div class="span5 asset">
+        <img class="img-polaroid" style="float:center" alt="Unlimited Possibilities" src="http://t3.gstatic.com/images?q=tbn:ANd9GcSX1tKiT3570tNLYHdlF-HxEyyWbJhKA148Dmu5yUUFb71NE-C2Xg" width="350" height="480">
+      </div><!-- Eye catcher pic end -->
+      <div class="span5 offset1 actions">
+        <div class="row-fluid">
+          <div class="span8 offset2">
+            <div class="row-fluid statistics">
+              <div class="span4">
+                <div class="linediv-l">
+                  <h3>10</h3> <p>backers</p>
+                </div><!-- linediv-l -->
+              </div><!-- backers end -->
+              <div class="span4">
+                <div class="linediv-c">
+                  <h3>$0</h3> <p> of $100</p>
+                </div><!-- linediv-c -->
+              </div><!-- dollars end -->
+              <div class="span4">
+                <div class="linediv-r">
+                  <h3>30</h3> <p>days left</p>
+                </div><!-- linediv-r -->
+              </div><!-- days end -->
+            </div><!-- row-fluid statistics -->
+          </div><!-- span8 offset2 -->
           <div class="row-fluid">
-            <div class="span8 offset2">
-              <div class="row-fluid statistics">
-                <div class="span4">
-                  <div class="linediv-l">
-                    <h3>10</h3> <p>backers</p>
-                  </div><!-- linediv-l -->
-                </div><!-- span4 -->
-                <div class="span4">
-                  <div class="linediv-c">
-                    <h3>$0</h3> <p> of $100</p>
-                  </div><!-- linediv-c -->
-                </div><!-- span4 -->
-                <div class="span4">
-                  <div class="linediv-r">
-                    <h3>30</h3> <p>days left</p>
-                  </div><!-- linediv-r -->
-                </div><!-- span4 -->
-              </div><!-- row-fluid statistics -->
-            </div><!-- span8 offset2 -->
-            <div class="row-fluid">
-              <div class="span10 offset1">
-                <div class="thermometer progress active">
-                  <div class="bar bar-success" style="width: 60%;"></div>
-                  <div class="bar bar-warning" style="width: 40%;"></div>
-                </div><!-- thermometer progress active -->
-              </div><!-- span10 offset1 -->
-            </div><!-- row-fluid -->
-            <div class="row-fluid">
-              <div class="span6 offset3 order">
-                <button class="btn btn-success btn-large">Preorder</button>
-              </div><!-- span6 offset3 order -->
-            </div><!-- row-fluid -->
-            <div class="row-fluid">
-              <div class="span8 offset2 social">
-                <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-                <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-              </div><!-- span8 offset2 social -->
-            </div><!-- row-fluid -->
+            <div class="span10 offset1">
+              <div class="thermometer progress active">
+                <div class="bar bar-success" style="width: 60%;">         
+                </div><!-- bar success end -->
+                <div class="bar bar-warning" style="width: 40%;">
+                </div><!-- bar warning end -->
+              </div><!-- progress bar end -->
+            </div><!-- span10 offset1 -->
           </div><!-- row-fluid -->
-        </div><!-- span5 actions -->
-      </div><!-- row-fluid pitch -->
-      <!-- Marketing copy -->
-      <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" style="float:center" alt="Upscale Affairs" src="http://www.trbimg.com/img-1191971009/turbine/la-fo-1010-edible.10-jperm0nc/1356" width="320" height="320">
-        </div><!-- span5 offset1 asset-->
-        <div class="span5 copy">
-          <p>
-            "Jell-o" shots.  These words together may invoke memories of our college and young adult experiences.  For others, the words may simply lack any significance at all.  Many think about a sweet sticky, goo-ey mass of "Jell-o" laced with some hard liquor served in a small, cheap paper cup.  These days, there is a "jelly shot" especially for more the more sophisticated adult who still has a flair for fun.<br>
-            <br>
-            Gourmet jelly shots have become the latest rave for weddings, formal dinners, and finer dining and martini establishments.  Pick your favorite libation, set it in gelatin, and present in sophisticated, fun, and impressive ways.  Presentation is as much as part of gourmet jelly shots as the concoction itself.  The only limitation is your own imagination!<br>
-            <br>
-            Join us.  Playing in "Jell-o" was never this fun!<br>
-          </p>
-        </div><!-- span5 copy-->
-      </div><!-- row-fluid section1 -->
-      <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>
-            Newbies, get your gourmet jelly shot on!  Choose from dozens of "new start" recipes.  Learn from the pro's. It's only as hard as you make it.<br>
-            <br>
-            For the more experienced, show us your latest innovations!  Share lessons learned with newcomers.  Get the latest on new techniques.<br>
-            <br>
-            Submit your best for contests.  Follow links to supply sites.  Find or report local vendors that stock the mixes you desire.  Get fast and easy access to supplier coupons and deals.<br>
-            <br>
-            Share your favorite funny or touching stories with fellow gourmet jelly shot enthusiasts.  Post pics of your most awesome shots!  Take a moment to let yourself shine...beginners and pro's alike.
-          </p>
-        </div><!-- span5 offset1 copy copy-right-->
-        <div class="span5 asset">
-          <img class="img-polaroid" style="float:right" alt="Resources And Connections" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRYHXQxg17_mn04hqeyCwoPyp8lTERB9WiX_b2K4BStywAalG-q" width="360" height="480">
-        </div><!-- span5 asset-->
-      </div><!-- row-fluid section2 -->
-      <div class="row-fluid faq">
-        <div class="span10 offset1">
-          <h3>FAQ</h3>
-          <div class="accordion" id="accordion2">
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse"
-                   data-parent="#accordion2" href="#collapseOne">
-                   What does "jelly shot" mean?
-                </a>
-              </div><!-- accordion-heading -->
-              <div id="collapseOne" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  A "jelly shot" is basically a shot of your favorite elixir set in a clear gelatin.
-                </div><!-- accordion-inner -->
-              </div><!-- collapseOne -->
-            </div><!-- accordion-group -->
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse"
-                   data-parent="#accordion2" href="#collapseTwo">
-                   What does gourmet really mean?
-                </a>
-              </div><!-- according-heading -->
-              <div id="collapseTwo" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  Webster dictionary: "a connoisseur of food and drink".  Oxford dictionary: "a connoisseur of good food; a person with a discerning palate".  Basically, "gourmet" equates to a taste for flavorful foods.
-                </div><!-- accordion-inner  -->
-              </div><!-- collapseTwo -->
-            </div><!-- accordion-group -->
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse"
-                   data-parent="#accordion2" href="#collapseThree">
-                   Does a "jelly shot" have to contain alcohol?
-                </a>
-              </div><!-- accordion-heading -->
-              <div id="collapseThree" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  No.  That would be like a "virgin" version of any alcoholic drink.
-                </div><!-- accordion-inner -->
-              </div><!-- collapseThree -->
-            </div><!-- accordion-group -->
-          </div><!-- accordion accordion2 -->
-        </div><!-- span10 offset1 -->
-      </div><!-- row-fluid faq --> 
-      <div class="row-fluid footer">
-        <div class="span12">
-          <p>This work is licensed under the
-             <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>
-             ,without all the cruft that would otherwise be put at the bottom of the page.
-          </p>
-        </div><!-- span12 -->
-      </div><!-- row-fluid footer -->
-    </div><!-- container -->
-  </body>
+          <div class="row-fluid">
+            <div class="span6 offset3 order">
+              <button class="btn btn-success btn-large">Preorder</button>
+            </div><!-- Preorder button end -->
+          </div><!-- row-fluid -->
+          <div class="row-fluid">
+            <div class="span8 offset2 social">
+              <div class="addthis_toolbox addthis_default_styleaddthis_32x32_style">
+                <a class="addthis_button_preferred_1"></a>
+                <a class="addthis_button_preferred_2"></a>
+                <a class="addthis_button_compact"></a>
+                <a class="addthis_counter addthis_bubble_style"></a>
+              </div><!-- social buttons end -->
+               <script type="text/javascript"> var addthis_config = {"data_track_addressbar": true};</script>
+               <script type="text/javascript"         
+                       src='http://ext.yimg.com/ec?url=%2F%2Fs7.addthis.com%2Fjs%2F300%2Faddthis_widget.js%23pubid%3Dra-51e5f5d9549fdf9b&t=1375828271&ttl=4492800&sig=1.QKSFSD2K_k0nmlTg3rzg--~B' ></script>
+            </div><!-- social end -->
+          </div><!-- row-fluid -->
+        </div><!-- row-fluid -->
+      </div><!-- span5 offset1 actions -->
+    </div><!-- row-fluid pitch -->
+
+    <!-- Marketing copy -->
+    <div class="row-fluid section1">
+      <div class="span5 asset">
+        <img class="img-polaroid" style="float:center" alt="Upscale Affairs" src="http://www.trbimg.com/img-1191971009/turbine/la-fo-1010-edible.10-jperm0nc/1356" width="320" height="320">
+      </div><!-- Upscale affairs pic end -->
+      <div class="span6 offset1 copy">
+        <p>
+          "Jell-o" shots.  These words together may invoke memories of crazy collegiate or young adult experiences.  Many of us instantly think about a sweet sticky, goo-ey mass of "Jell-o" laced with some hard liquor served in a small, cheap paper cup.  These days, there is a "jelly shot" especially for the adults who seek sophisticated fun and a creative outlet.<br>
+          <br>
+          Gourmet jelly shots have become the latest rave for weddings, formal dinners, and finer dining and martini establishments.  Pick your favorite libation, set it in gelatin, and present in sophisticated, fun, and impressive ways.  Presentation is as much as part of gourmet jelly shots as the concoction itself.  The only limitation is your own imagination!<br>
+          <br>
+          Join us.  Playing in "Jell-o" has never been this fun!<br>
+        </p>
+      </div><!-- Intro copy end-->
+    </div><!-- row-fluid section1 end -->
+
+    <div class="row-fluid section2">
+      <div class="span6 copy copy-right">
+        <p>
+          Newbies, get your gourmet jelly shot on!  Choose from dozens of "new start" recipes.  Learn from the pro's. It's only as hard as you make it.<br>
+          <br>
+          For the more experienced, show us your latest innovations!  Share lessons learned with newcomers.  Get the latest on new techniques.<br>
+          <br>
+          Submit your best for contests.  Follow links to supply sites.  Find or report local vendors that stock the mixes you desire.  Get fast and easy access to supplier coupons and deals.<br>
+          <br>
+          Share your favorite funny or touching stories with fellow gourmet jelly shot enthusiasts.  Post pics of your most awesome shots!  Take a moment to let yourself shine...beginners and pro's alike.
+        </p>
+      </div><!-- Invitation copy end -->
+      <div class="span5 offset1 asset">
+        <img class="img-polaroid" style="float:right" alt="Resources And Connections" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRYHXQxg17_mn04hqeyCwoPyp8lTERB9WiX_b2K4BStywAalG-q" width="360" height="480">
+      </div><!-- Resource connection pic end -->
+    </div><!-- row-fluid section2 end -->
+    
+    <div class="row-fluid faq">
+      <div class="span10 offset1">
+        <h3><u>FAQs</u></h3>
+        <div class="accordion" id="accordion2">
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse"
+                 data-parent="#accordion2" href="#FAQ1">
+                 What does "jelly shot" mean?
+              </a>
+            </div><!-- Question end -->
+            <div id="FAQ1" class="accordion-body collapse">
+              <div class="accordion-inner">
+                A "jelly shot" is basically a shot of your favorite elixir set in a clear gelatin.
+              </div><!-- accordion-inner -->
+            </div><!-- Answer end -->
+          </div><!-- accordion-group -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse"
+                 data-parent="#accordion2" href="#FAQ2">
+                 What does gourmet really mean?
+              </a>
+            </div><!-- Question end -->
+            <div id="FAQ2" class="accordion-body collapse">
+              <div class="accordion-inner">
+                Webster dictionary: "a connoisseur of food and drink".  Oxford dictionary: "a connoisseur of good food; a person with a discerning palate".  Basically, "gourmet" equates to a taste for flavorful foods.
+              </div><!-- accordion-inner  -->
+            </div><!-- Answer end -->
+          </div><!-- accordion-group -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse"
+                 data-parent="#accordion2" href="#FAQ3">
+                 Does a "jelly shot" have to contain alcohol?
+              </a>
+            </div><!-- Question end -->
+            <div id="FAQ3" class="accordion-body collapse">
+              <div class="accordion-inner">
+                No.  That would be like a "virgin" version of any alcoholic drink--great for any child age 2 to 92!
+              </div><!-- accordion-inner -->
+            </div><!-- Answer end -->
+          </div><!-- accordion-group -->
+        </div><!-- accordion accordion2 -->
+      </div><!-- span10 offset1 -->
+    </div><!-- row-fluid faq --> 
+    
+    <div class="row-fluid footer">
+      <div class="span12">
+        <p>This work is licensed under the
+           <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>
+           ,without all the cruft that would otherwise be put at the bottom of the page.
+        </p>
+      </div><!-- span12 -->
+    </div><!-- row-fluid footer -->
+
+  </div><!-- container -->
+
+  <!-- Invoke Google Analytics analytics.js -->
+  <script> (function(i,s,o,g,r,a,m) {
+        i['GoogleAnalyticsObject']=r;
+        i[r]=i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        },
+      i[r].l = 1*new Date();
+      a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a,m)
+      })
+      (window, document, 'script','//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-42958196-1', 'heroku.com');
+      ga('send', 'pageview');
+  </script>
+
+</body>
+
 </html>
