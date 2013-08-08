@@ -60,6 +60,7 @@
       font-size: 18px;
       line-height: 24px;
     }
+
     /*Video pitch and Action*/
     .pitch {
       padding: 2.5% 0%;
@@ -68,7 +69,7 @@
       padding: 2% 0%;
     }
     .actions {
-      background-color: #343434;
+      background-color: #2B60DE;
       padding: 3% 0%;
     }
     .video, .thermometer, .order, .social, .statistics {
@@ -77,12 +78,16 @@
     .statistics h3, .statistics p {
       color: white;
     }
+    .faq h3 {
+      font-size: 14px;
+      color: #0020C2;
+    }
 
     /*Market Copy and Footer*/
     .copy {
       padding-top: 2.5%;
       padding-bottom: 2.5%;
-      text-align: justify;
+      text-align: left;
     }
     .asset {
       padding: 2.5% 0%;
@@ -100,7 +105,7 @@
   
   <!-- http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position -->
   div.addthis_toolbox {
-    width:210px;
+    width:180px;
     margin: 0 auto;
   }
 </style>
@@ -122,7 +127,6 @@
 </script>
 
 </head>
-
 <body>
   
   <!-- Mobile-friendly navigation bar -->
@@ -164,12 +168,15 @@
     </div><!-- row-fluid subheading -->
     
     <div class="row-fluid pitch">
+
       <div class="span3 asset">
         <img class="img-polaroid" alt="Unlimited Possibilities" src="http://t3.gstatic.com/images?q=tbn:ANd9GcSX1tKiT3570tNLYHdlF-HxEyyWbJhKA148Dmu5yUUFb71NE-C2Xg">
       </div><!-- Eye catcher pic end -->
+
       <div class="span8 offset1 actions">
         <div class="row-fluid">
           <div class="span8 offset2">
+
             <div class="row-fluid statistics">
               <div class="span4">
                 <div class="linediv-l">
@@ -187,23 +194,34 @@
                 </div><!-- linediv-r -->
               </div><!-- days end -->
             </div><!-- row-fluid statistics -->
+
           </div><!-- span8 offset2 -->
           <div class="row-fluid">
             <div class="span10 offset1">
+
               <div class="thermometer progress active">
                 <div class="bar bar-success" style="width: 60%;">         
                 </div><!-- bar success end -->
                 <div class="bar bar-warning" style="width: 40%;">
                 </div><!-- bar warning end -->
               </div><!-- progress bar end -->
+
             </div><!-- span10 offset1 -->
           </div><!-- row-fluid -->
           <div class="row-fluid">
             <div class="span6 offset3 order">
-              <button class="btn btn-success btn-large">Preorder</button>
-            </div><!-- Preorder button end -->
+
+              <a class="coinbase-button" data-code="d3d98b6b1080aae2d8cab2915c1e5a50" 
+                 data-button-style="custom_large"
+                 href="https://coinbase.com/checkouts/d3d98b6b1080aae2d8cab2915c1e5a50">Pay With Bitcoin
+              </a>
+              <script src="https://coinbase.com/assets/button.js" type="text/javascript">
+              </script>
+            </div><!-- Bitcoin button end -->
+
           <div class="row-fluid">
             <div class="span8 offset4 social">
+
               <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
                 <a class="addthis_button_preferred_1"></a>
                 <a class="addthis_button_preferred_2"></a>
@@ -214,6 +232,7 @@
                <script type="text/javascript"         
                        src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5200f3505c6aef29"></script>
             </div><!-- social end -->
+
           </div><!-- row-fluid -->
           </div><!-- row-fluid -->
         </div><!-- row-fluid -->
@@ -222,9 +241,11 @@
 
     <!-- Marketing copy -->
     <div class="row-fluid section1">
+
       <div class="span3 asset">
         <img class="img-polaroid" alt="Upscale Affairs" src="http://www.trbimg.com/img-1191971009/turbine/la-fo-1010-edible.10-jperm0nc/1356">
       </div><!-- Upscale affairs pic end -->
+
       <div class="span8 offset1 copy">
         <p>
           "Jell-o" shots.  These words together may invoke memories of crazy collegiate or young adult experiences.  Many of us instantly think about a sweet sticky, goo-ey mass of "Jell-o" laced with some hard liquor served in a small, cheap paper cup.  These days, there is a "jelly shot" especially for the adults who seek sophisticated fun and a creative outlet.<br>
@@ -237,6 +258,7 @@
     </div><!-- row-fluid section1 end -->
 
     <div class="row-fluid section2">
+
       <div class="span8 copy copy-right">
         <p>
           Newbies, get your gourmet jelly shot on!  Choose from dozens of "new start" recipes.  Learn from the pro's. It's only as hard as you make it.<br>
@@ -248,15 +270,18 @@
           Share your favorite funny or touching stories with fellow gourmet jelly shot enthusiasts.  Post pics of your most awesome shots!  Take a moment to let yourself shine...beginners and pro's alike.
         </p>
       </div><!-- Invitation copy end -->
+
       <div class="span3 offset1 asset">
         <img class="img-polaroid" alt="Resources And Connections" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRYHXQxg17_mn04hqeyCwoPyp8lTERB9WiX_b2K4BStywAalG-q">
       </div><!-- Resource connection pic end -->
+
     </div><!-- row-fluid section2 end -->
     
     <div class="row-fluid faq">
       <div class="span10 offset1">
         <h3><u>FAQs</u></h3>
         <div class="accordion" id="accordion2">
+
           <div class="accordion-group">
             <div class="accordion-heading">
               <a class="accordion-toggle" data-toggle="collapse"
@@ -270,6 +295,7 @@
               </div><!-- accordion-inner -->
             </div><!-- Answer end -->
           </div><!-- accordion-group -->
+
           <div class="accordion-group">
             <div class="accordion-heading">
               <a class="accordion-toggle" data-toggle="collapse"
@@ -283,6 +309,7 @@
               </div><!-- accordion-inner  -->
             </div><!-- Answer end -->
           </div><!-- accordion-group -->
+
           <div class="accordion-group">
             <div class="accordion-heading">
               <a class="accordion-toggle" data-toggle="collapse"
@@ -296,6 +323,7 @@
               </div><!-- accordion-inner -->
             </div><!-- Answer end -->
           </div><!-- accordion-group -->
+
         </div><!-- accordion accordion2 -->
       </div><!-- span10 offset1 -->
     </div><!-- row-fluid faq --> 
@@ -330,5 +358,4 @@
   </script>
 
 </body>
-
 </html>
